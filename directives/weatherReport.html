@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{convertToDate({dt: weatherDay.dt}) | date: dateFormat }}</h3>
+    <div class="panel-body">
+      Main Temperature: {{convertToStandard({deg: weatherDay.main.temp})}} F
+    </div>
+    <div class="panel-body">
+      Wind Speed: {{weatherDay.wind.speed}}
+    </div>
+    <div class="panel-body">
+      Main Weather: {{weatherDay.weather[0].main}}
+    </div>
+    <div class="panel-body">
+      Description: {{weatherDay.weather[0].description}}
+    </div>
+  </div>
+</div>
