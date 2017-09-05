@@ -1,1 +1,24 @@
-Forecast {{city}}
+<h3>Forecast for {{city}}:</h3>
+<div ng-repeat="w in weatherResult.list">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{convertDate(w.dt) | date: 'MMM, d, y' }}</h3>
+          <div class="panel-body">
+            Main Temperature: {{convertToFahrenheit(w.main.temp)}} F
+          </div>
+          <div class="panel-body">
+            Wind Speed: {{w.wind.speed}}
+          </div>
+          <div class="panel-body">
+            Main Weather: {{w.weather[0].main}}
+          </div>
+          <div class="panel-body">
+            Description: {{w.weather[0].description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
