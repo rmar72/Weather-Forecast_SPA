@@ -5,10 +5,10 @@ weatherApp.directive('weatherReport', function(){
     templateUrl:"directives/weatherReport.html",
     replace:true,
     scope: {
-      weatherDay: "=",
-      convertToStandard: "&",
-      convertToDate: "&",
-      dateFormat: "@"
+      weatherDay: "=", //2way binding object
+      convertToStandard: "&", // function
+      convertToDate: "&", // fn
+      dateFormat: "@" // 1way binding string
     }
   }
 });
