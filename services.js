@@ -1,4 +1,4 @@
 //SERVICES
-weatherApp.service('cityService' ,function(){
-  this.city = "Denver, CO";
+weatherApp.service('zipCodeService' ,function(){
+  this.zipcode = 80640;
 });
